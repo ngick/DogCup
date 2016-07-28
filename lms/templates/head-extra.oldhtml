@@ -13,7 +13,7 @@
         hs.wrapperClassName = 'draggable-header';
 </script>
 
-<!-- this file is theme-head-extra -->
+<!-- this file is head-extra -->
 
 
 
