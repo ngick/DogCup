@@ -16,10 +16,16 @@ from django.core.urlresolvers import reverse
       <h2 class="course-name">
         <span class="course-organization">${course.short_description}
 <!--${course.display_org_with_default | h}--></span>
-        <span class="course-code">${course.display_number_with_default | h}</span>
-        <span class="course-title">${course.display_name_with_default}</span>
+<!--        <span class="course-code">${course.display_number_with_default | h}</span>-->
+        <span class="course-title">${course.display_number_with_default | h}: ${course.display_name_with_default}</span>
       </h2>
-      <div class="course-date" aria-hidden="true">${_("Starts")}: ${course.start_datetime_text()}</div>
+      <div class="course-date" aria-hidden="true">
+% if unicode('SELFPACED') in unicode(course.short_description):
+       ΑΥΤΟΜΕΛΕΤΗ
+% else:
+       ${_("Starts")}: ${course.start_datetime_text()}
+% endif
+</div>
     </div>
 
 
