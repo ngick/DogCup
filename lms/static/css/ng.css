@@ -1,4 +1,30 @@
+/*the following are mods */
+
+
 .learn-more{
 left: calc(50%-105px)!important;
 width: 210px!important;
 }
+
+.dashboard .my-courses .course .details .course-title a, .dashboard .my-courses .course .details .course-title span{
+font-weight:inherit!important;
+font-size:20px!important;
+}
+h2{
+text-transform:none!important;
+}
+
+/*the following are added features*/
+img.rs
+{
+float: left; 
+margin-right: 10px;
+width: 200px;
+height: auto;
+}
+.sLine
+{
+overflow: hidden;
+white-space: nowrap;
+}
+
