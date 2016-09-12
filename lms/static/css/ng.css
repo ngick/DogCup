@@ -30,17 +30,73 @@ text-transform:none!important;
 h2{
 text-transform:none!important;
 }
+/* the following are for the logo in header*/
+/*header.global h1.logo{
+float:none;!important;
+position:initial!important;
+text-align:center!important;
+margin-left:auto!important;
+margin-right:auto!important;
 
+}
+
+header.global h1.logo a{
+display:initial!important;
+}*/
+/*the following are for the slogan header*/
+.home>header{
+/*background:none!important;*/
+box-shadow:none!important;
+}
+.home>header .title>hgroup h2, .home>header .title>hgroup section.outside-app h1, section.outside-app .home>header .title>hgroup h1{
+text-align:center;
+}
+.home>header .title{
+text-align:center;
+box-shadow:none!important;
+background:none!important; /*this is for the color just under slogan NO AVAILABLE VARIABLE*/
+}
+/*the followin is for the small dropdown button on top right */
+header.global .user .dropdown{
+background:#efefef;
+}
+
+.home .highlighted-courses{
+margin-bottom:0px;
+}
+
+/*color for the form login-register*/
+.login-register{
+background:none;
+}
+/*hide the profile sidebar from the dashboard*/
+.dashboard .profile-sidebar{
+display:none!important;
+}
+
+/*give more space in course listings and center them*/
+.dashboard .my-courses{
+width:80%!important;
+margin-left:auto!important;
+margin-right:auto!important;
+float:none;
+
+}
+
+
+/*to eliminate the space above footer*/
+.wrapper-footer{
+margin-top:0px!important;
+}
 /*the following are added features*/
-img.rs
-{
+img.rs{
 float: left; 
 margin-right: 10px;
 width: 200px;
 height: auto;
 }
-.sLine
-{
+
+.sLine{
 overflow: hidden;
 white-space: nowrap;
 }

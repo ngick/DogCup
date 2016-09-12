@@ -1,8 +1,11 @@
 ## mako
-<%! from django.core.urlresolvers import reverse %>
-<%namespace name='static' file='/static_content.html'/>
-<%! from datetime import datetime %>
-<%! from pytz import UTC %>
+<%!
+  from django.core.urlresolvers import reverse
+  from django.utils.translation import ugettext as _
+  from branding.api import get_footer
+%>
+<% footer = get_footer(is_secure=is_secure) %>
+<%namespace name='static' file='static_content.html'/>
 
 <!--ngick already moved to ngextra.css after updating assets remove it-->
 <style>
@@ -13,22 +16,41 @@ text-transform:none !important;
    font-family:times; 
     font-size:1.15em;
   }
+.nav-colophon {
+margin:0px!important;
+}
+.nav-colophon li{
+float:left;
+}
+p.ngabout {
+line-height:1.6em;
+} 
+div.references{
+float:right;
+margin:0px!important;
+width:auto!important;
+}
+a.share{
+ color:#1790c7!important;
+ transition:color 0.4s ease!important;
+}
+a.share:hover{
+color:#0078b0!important;
+border-bottom:none!important;
+}
 </style>
 
-<div class="wrapper-footer">
-  <footer>
+<div class="wrapper wrapper-footer">
+  <footer id="footer-openedx">
     <div class="colophon">
       <nav class="nav-colophon">
         <ol>
-          <li><img src="/static/themes/cuptheme/images/MLogo.svg" alt="Mathesis" height="35px" style="margin-top:-8px"></li>
+          <li><img src="${static.url('/static/images/icnlogo.svg')}" alt="Mathesis" height="35px" style="margin-top:-8px"></li>
           <li class="nav-colophon-01"><a href="${marketing_link('FOREAS')}">Περί</a></li>
    <!--       <li><a href="${reverse('about')}">Περί</a></li>-->
           <li class="nav-colophon-02"><a href="${marketing_link('NEWS')}">Νέα</a></li>
           <li><a href="${marketing_link('FAQ')}">Συχνές ερωτήσεις</a></li>
-          <li><a href="${reverse('tos')}">Όροι χρήσης<!-- - Κώδικας τιμής--></a></li>
-<!--  <li><a href="${reverse('tos')}#honor">Honor Code</a></li>
-  <li><a href="${reverse('tos')}#copyright">Copyright</a></li>
-  <li><a href="${reverse('about')}#careers">Careers</a></li>-->
+          <li><a href="${reverse('tos')}">Όροι χρήσης</a></li>
           <li><a href="${marketing_link('CONTACT')}">Επικοινωνία</a></li>
         </ol>
       </nav>
