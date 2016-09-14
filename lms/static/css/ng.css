@@ -38,6 +38,12 @@ text-transform:none!important;
 h2{
 text-transform:none!important;
 }
+
+/*in buttons check, Save Show answer */
+.xmodule_display.xmodule_CapaModule div.problem .action .save, .xmodule_display.xmodule_CapaModule div.problem .action .check, .xmodule_display.xmodule_CapaModule div.problem .action .show, .xmodule_display.xmodule_CapaModule div.problem .action .reset, .xmodule_display.xmodule_CapaModule div.problem .action .hint-button{
+text-transform:none!important;
+}
+
 /*password reset form */
 .view-register .introduction header .title .title-super, .view-login .introduction header .title .title-super, .view-passwordreset .introduction header .title .title-super{
 text-transform:none!important;
@@ -54,6 +60,10 @@ font-weight:400;
 }
 /*end of password reset form*/
 
+/*ACCOUNT SETTINGS */
+.account-settings-container .wrapper-header .account-settings-header-subtitle{
+display:none!important;
+}
 
 /*IN COURSES logo*/
 header.global.slim h1.logo img{
@@ -61,7 +71,11 @@ height:40px;
 margin-top:-10px;
 }
 
-
+/*FORUM*/
+/*preview*/
+.container .discussion-body .wmd-preview-label, section.outside-app .discussion-body .wmd-preview-label, .wrapper-account-settings .discussion-body .wmd-preview-label, .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .discussion-body .wmd-preview-label, .view-profile .wrapper-profile-sections .discussion-body .wmd-preview-label, .container .discussion-module .wmd-preview-label, section.outside-app .discussion-module .wmd-preview-label, .wrapper-account-settings .discussion-module .wmd-preview-label, .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .discussion-module .wmd-preview-label, .view-profile .wrapper-profile-sections .discussion-module .wmd-preview-label, .container .discussion-user-threads .wmd-preview-label, section.outside-app .discussion-user-threads .wmd-preview-label, .wrapper-account-settings .discussion-user-threads .wmd-preview-label, .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .discussion-user-threads .wmd-preview-label, .view-profile .wrapper-profile-sections .discussion-user-threads .wmd-preview-label{
+text-transform:none!important;
+}
 
 
 
@@ -95,7 +109,13 @@ text-align:center;
 box-shadow:none!important;
 background:none!important; /*this is for the color just under slogan NO AVAILABLE VARIABLE*/
 }
-/*the followin is for the small dropdown button on top right */
+
+/*the following are for the blue bar under each course in homepage*/
+.courses-container .courses .course{
+border-bottom:none!important;
+
+}
+/*the following are for the small dropdown button on top right */
 header.global .user .dropdown{
 background:#efefef;
 }
@@ -108,6 +128,10 @@ margin-bottom:0px;
 .login-register{
 background:none;
 }
+.login-form .section-title{
+display:none;
+}
+
 .login-register .section-title.lines .text, .financial-assistance-wrapper .financial-assistance-form .section-title.lines .text{
 background:#efefef!important;
 }
@@ -131,6 +155,11 @@ margin-right:auto!important;
 float:none;
 
 }
+/* Hide info for the grade and certificate in dashboard */
+.course-item .course-container .course .wrapper-messages-primary{
+display:none!important;
+}
+
 
 /*for hidding a link like physics, history in the about page course just after the course title*/
 .course-info header.course-profile .intro-inner-wrapper .intro > hgroup h1 a{
@@ -154,4 +183,10 @@ height: auto;
 overflow: hidden;
 white-space: nowrap;
 }
-
+div.shortdesc{
+margin-bottom:3px;
+font-weight:bold;
+}
+span.shortdesc{
+font-style:italic;
+}
