@@ -9,7 +9,7 @@ $link-color:gray !default;
 //COLORS BACKGROUND
 
 // the body of page it seems that the body is in the couse boxes and one line over the footer which I delete it
-//$body-bg: green!default;
+$body-bg: #efefef!default;
 
 //the html page
 html{
@@ -36,13 +36,18 @@ $homepage__header--gradient__color--alpha: #efefef !default;
 //changing the border between courses in dashboard and also the border around the courses in dashboard
 $border-color-l4:#cfcfcf!default;
 
+//bg color for password-reset-confirm
+$container-bg: #efefef!default;
+
+
 //unknown
-$container-bg: olive !default;
+/*
 $homepage__header--gradient__color--bravo: teal !default;
 $homepage__header--background: navy !default;
 $modal-bg-color: lime!default;
 $homepage__header--background: maroon !default;
 $course-bg-color: aqua !default;
+*/
 
 //.course-organization{
 //   display-none;

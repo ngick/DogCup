@@ -26,7 +26,7 @@ style="border-bottom: 3px solid blue;"
 
 
 % if unicode('DISABLED') not in unicode(course.short_description):
-        <span class="course-title">${course.display_number_with_default | h}: ${course.display_name_with_default}</span>
+        <span class="course-title"><span style='font-size:16px;font-weight:600;'>${course.display_number_with_default | h}</span> ${course.display_name_with_default}</span>
 %endif
       </h2>
       <div class="course-date" aria-hidden="true">

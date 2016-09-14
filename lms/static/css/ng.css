@@ -1,11 +1,21 @@
 /*the following are mods */
 
-
+/*courses homepage*/
 .learn-more{
 left: calc(50%-105px)!important;
 width: 210px!important;
 }
+.highlighted-courses .courses{
+padding-top:0px!important;
+}
 
+.content-wrapper{
+padding-bottom:30px!important;
+}
+/*find-courses*/
+.find-courses .courses{
+padding-top:70px!important;
+}
 .dashboard .my-courses .course .details .course-title a, .dashboard .my-courses .course .details .course-title span{
 font-weight:inherit!important;
 font-size:1.5em!important;
@@ -25,11 +35,36 @@ text-transform:none!important;
 text-transform:none!important;
 }
 
-
-
 h2{
 text-transform:none!important;
 }
+/*password reset form */
+.view-register .introduction header .title .title-super, .view-login .introduction header .title .title-super, .view-passwordreset .introduction header .title .title-super{
+text-transform:none!important;
+font-weight:400;
+
+}
+.view-passwordreset .introduction header{
+background:none!important;
+height:100px!important;
+}
+.view-passwordreset .passwordreset form .instructions{
+font-weight:400;
+
+}
+/*end of password reset form*/
+
+
+/*IN COURSES logo*/
+header.global.slim h1.logo img{
+height:40px;
+margin-top:-10px;
+}
+
+
+
+
+
 /* the following are for the logo in header*/
 /*header.global h1.logo{
 float:none;!important;
@@ -51,6 +86,10 @@ box-shadow:none!important;
 .home>header .title>hgroup h2, .home>header .title>hgroup section.outside-app h1, section.outside-app .home>header .title>hgroup h1{
 text-align:center;
 }
+.home>header .title>hgroup h1{
+  text-align:center;
+}
+
 .home>header .title{
 text-align:center;
 box-shadow:none!important;
@@ -69,6 +108,16 @@ margin-bottom:0px;
 .login-register{
 background:none;
 }
+.login-register .section-title.lines .text, .financial-assistance-wrapper .financial-assistance-form .section-title.lines .text{
+background:#efefef!important;
+}
+.login-register .nav-btn, .financial-assistance-wrapper .financial-assistance-form .nav-btn, .login-register .button-secondary-login, .financial-assistance-wrapper .financial-assistance-form .button-secondary-login{
+height:auto!important;
+
+}
+
+
+
 /*hide the profile sidebar from the dashboard*/
 .dashboard .profile-sidebar{
 display:none!important;
@@ -83,10 +132,15 @@ float:none;
 
 }
 
-
+/*for hidding a link like physics, history in the about page course just after the course title*/
+.course-info header.course-profile .intro-inner-wrapper .intro > hgroup h1 a{
+display:none!important;
+}
 /*to eliminate the space above footer*/
 .wrapper-footer{
 margin-top:0px!important;
+box-shadow:none!important;
+border-top:none!important;
 }
 /*the following are added features*/
 img.rs{
