@@ -76,7 +76,15 @@ margin-top:-10px;
 .container .discussion-body .wmd-preview-label, section.outside-app .discussion-body .wmd-preview-label, .wrapper-account-settings .discussion-body .wmd-preview-label, .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .discussion-body .wmd-preview-label, .view-profile .wrapper-profile-sections .discussion-body .wmd-preview-label, .container .discussion-module .wmd-preview-label, section.outside-app .discussion-module .wmd-preview-label, .wrapper-account-settings .discussion-module .wmd-preview-label, .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .discussion-module .wmd-preview-label, .view-profile .wrapper-profile-sections .discussion-module .wmd-preview-label, .container .discussion-user-threads .wmd-preview-label, section.outside-app .discussion-user-threads .wmd-preview-label, .wrapper-account-settings .discussion-user-threads .wmd-preview-label, .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .discussion-user-threads .wmd-preview-label, .view-profile .wrapper-profile-sections .discussion-user-threads .wmd-preview-label{
 text-transform:none!important;
 }
+/*for making the number of posts red, when there are new posts in theads that I have visited*/
+span.forum-nav-thread-comments-count.is-unread{
+color: red;
+}
 
+/*hiding the email icon from forum*/
+.home-helpgrid tr.helpgrid-row.helpgrid-row-notification{
+/*display:none!important;*/
+}
 
 
 /* the following are for the logo in header*/
@@ -171,6 +179,22 @@ margin-top:0px!important;
 box-shadow:none!important;
 border-top:none!important;
 }
+
+/*the following are for tiding up the poll and survey*/
+li.poll-answer{
+margin-bottom:0!important;
+}
+
+ul.poll-answers, ul.poll-answers-results{
+max-width:95%;
+}
+
+.percentage-gauge-container{
+width:85%!important;
+}
+
+
+
 /*the following are added features*/
 img.rs{
 float: left; 

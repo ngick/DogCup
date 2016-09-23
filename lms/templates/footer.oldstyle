@@ -50,7 +50,7 @@ border-bottom:none!important;
    <!--       <li><a href="${reverse('about')}">Περί</a></li>-->
           <li class="nav-colophon-02"><a href="${marketing_link('NEWS')}">Νέα</a></li>
           <li><a href="${marketing_link('FAQ')}">Συχνές ερωτήσεις</a></li>
-          <li><a href="${reverse('tos')}">Όροι χρήσης</a></li>
+          <li><a href="${reverse('honor')}">Όροι χρήσης</a></li>
           <li><a href="${marketing_link('CONTACT')}">Επικοινωνία</a></li>
         </ol>
       </nav>
