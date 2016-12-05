@@ -26,15 +26,22 @@ elif cert_status['status'] == 'notpassing':
 else:
     status_css_class = 'course-status-processing'
 %>
-<div class="message message-status ${status_css_class} is-shown">
+
 % if cert_status['status'] == 'processing':
-  <p class="message-copy" style="display:none;">${_("Final course details are being wrapped up at this time. Your final standing will be available shortly.")}</p>
+<div style="display:none;">
+% else:
+<div class="message message-status ${status_css_class} is-shown ngfix">
+% endif
+
+% if cert_status['status'] == 'processing':
+  <p class="message-copy">${_("Final course details are being wrapped up at this time. Your final standing will be available shortly.")}</p>
 % elif cert_status['status'] in ('generating', 'ready', 'notpassing', 'restricted', 'auditing'):
-  <p class="message-copy">${_("Your final grade:")}
+  <p class="message-copy"><!--${_("Your final grade:")}--> Ο τελικός βαθμός σας είναι:
   <span class="grade-value">${"{0:.0f}%".format(float(cert_status['grade'])*100)}</span>.
     % if cert_status['status'] == 'notpassing':
       % if enrollment.mode != 'audit':
-        ${_("Grade required for a {cert_name_short}:").format(cert_name_short=cert_name_short)} <span class="grade-value">
+	Βαθμός απόκτησης βεβαίωσης
+        <!--${_("Grade required for a {cert_name_short}:").format(cert_name_short=cert_name_short)}--> <span class="grade-value">
       % else:
         ${_("Grade required to pass this course:")} <span class="grade-value">
       % endif
@@ -61,7 +68,8 @@ else:
         <li class="action action-certificate">
         <a class="btn" href="${cert_status['cert_web_view_url']}" target="_blank"
            title="${_('This link will open the certificate web view')}">
-           ${_("View {cert_name_short}").format(cert_name_short=cert_name_short,)}</a></li>
+		Δείτε τη Βεβαίωση
+          <!-- ${_("View {cert_name_short}").format(cert_name_short=cert_name_short,)}--></a></li>
       % elif cert_status['show_download_url'] and enrollment.mode in CourseMode.NON_VERIFIED_MODES:
         <li class="action action-certificate">
         <a class="btn" href="${cert_status['download_url']}"

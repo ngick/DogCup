@@ -168,7 +168,7 @@ float:none;
 }
 /* Hide info for the grade and certificate in dashboard */
 .course-item .course-container .course .wrapper-messages-primary{
-display:none!important;
+/*display:none!important;*/
 }
 
 
